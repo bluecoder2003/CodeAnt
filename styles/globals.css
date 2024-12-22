@@ -2,8 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400&display=swap');
-
 @layer base {
     :root {
       --PrimaryWhite: 0 0% 100%; /*FFFFFF*/
@@ -18,8 +16,5 @@
       --BlueLightColor: 210 100% 85%; /*B2DDFF*/
     }
 
-    body {
-      font-family: 'Satoshi', sans-serif;
-    }
   }
 

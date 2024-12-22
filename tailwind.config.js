@@ -6,9 +6,6 @@ export default {
   ],
   theme: {
     extend: {
-      fontFamily: {
-        satoshi: ['Satoshi', 'sans-serif'],
-      },
       colors: {
         primaryWhite: "hsl(var(--PrimaryWhite))",
         bgWhiteVariant: "hsl(var(--BgWhiteVariant))",

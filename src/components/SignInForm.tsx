@@ -90,7 +90,7 @@ const SignInPage = () => {
                 <button
                   key={option}
                   onClick={() => setSelectedOption(option)}
-                  className={`px-4 py-2 w-full transition-colors rounded-lg ${
+                  className={`px-4 py-3 w-full transition-colors rounded-lg ${
                     selectedOption === option
                       ? 'bg-blue-600 text-white'
                       : 'text-TextLightGrey hover:bg-gray-100 border border-strokeColor'
