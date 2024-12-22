@@ -1,0 +1,25 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Satoshi:wght@400&display=swap');
+
+@layer base {
+    :root {
+      --PrimaryWhite: 0 0% 100%; /*FFFFFF*/
+      --BgWhiteVariant: 0 0% 98%; /*FAFAFA*/
+      --SecondaryColor: 220 100% 39%; /*0049C6*/
+      --DarkColor: 220 100% 12%; /*081735*/
+      --StrokeColor: 0 0% 91%; /*E9EAEB*/
+      --TextLightGrey: 0 0% 9%; /*171717*/
+      --TextBlack: 220 20% 15%; /*181D27*/
+      --TextDarkGray: 220 10% 25%; /*414651*/
+      --PurpleColor: 250 100% 80%; /*9D90FA*/
+      --BlueLightColor: 210 100% 85%; /*B2DDFF*/
+    }
+
+    body {
+      font-family: 'Satoshi', sans-serif;
+    }
+  }
+
