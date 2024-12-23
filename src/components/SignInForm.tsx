@@ -1,34 +1,25 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { AiFillPieChart } from "react-icons/ai";
-import { FaGithub } from "react-icons/fa";
-import { FaBitbucket } from "react-icons/fa";
+import { FaGithub, FaBitbucket, FaGitlab } from "react-icons/fa";
 import { VscAzureDevops } from "react-icons/vsc";
-import { FaGitlab } from "react-icons/fa";
 import { IoKeyOutline } from "react-icons/io5";
+import data from '../MockData/SignIn.json';
+
+const iconMap = {
+  FaGithub: <FaGithub className='w-8 h-8' />,
+  FaBitbucket: <FaBitbucket className='w-8 h-8 text-secondaryColor' />,
+  VscAzureDevops: <VscAzureDevops className='w-8 h-8 text-secondaryColor' />,
+  FaGitlab: <FaGitlab className='w-8 h-8 text-[#E24329]' />,
+  IoKeyOutline: <IoKeyOutline className='w-8 h-8' />
+};
 
 const SignInPage = () => {
   const [selectedOption, setSelectedOption] = useState('SAAS');
   const navigate = useNavigate();
   
-  const stats = [
-    { value: '30+', label: 'Language Support' },
-    { value: '10K+', label: 'Developers' },
-    { value: '100K+', label: 'Hours Saved' }
-  ];
-
-  const authButtons = {
-    SAAS: [
-      { icon: <FaGithub className='w-8 h-8'/>, text: 'Sign in with Github', provider: 'github' },
-      { icon: <FaBitbucket className='w-8 h-8 text-secondaryColor'/>, text: 'Sign in with Bitbucket', provider: 'bitbucket' },
-      { icon: <VscAzureDevops className='w-8 h-8 text-secondaryColor'/>, text: 'Sign in with Azure Devops', provider: 'azure' },
-      { icon: <FaGitlab className='w-8 h-8 text-[#E24329]'/>, text: 'Sign in with GitLab', provider: 'gitlab' }
-    ],
-    'Self Hosted': [
-      { icon: <FaGitlab className='w-8 h-8 text-[#E24329]'/>, text: 'Self Hosted GitLab', provider: 'gitlab' },
-      { icon: <IoKeyOutline className='w-8 h-8'/>, text: 'Sign in with SSO', provider: 'sso' }
-    ]
-  };
+  const stats = data.stats;
+  const authButtonsData = data.authButtons;
 
   const handleSignIn = (provider) => {
     navigate('/dashboard');
@@ -36,7 +27,6 @@ const SignInPage = () => {
 
   return (
     <div className="min-h-screen flex">
-      
       <div className="flex-1 p-8 flex-col justify-center items-center relative overflow-hidden bg-primaryWhite border-r border-strokeColor hidden md:flex">
         <div className="absolute bottom-0 left-0 w-72 h-72 opacity-10">
           <img src="/assets/CodeAntLogo.webp" alt="CodeAnt Background" className="w-full h-full" />
@@ -103,14 +93,14 @@ const SignInPage = () => {
           </div>
           <div className="text-center text-sm text-textLightGrey px-4 md:px-8 py-4 md:min-h-[250px]">
           <div className="space-y-3 justify-center items-center flex flex-col">
-            {authButtons[selectedOption].map(({ icon, text, provider }) => (
+            {authButtonsData[selectedOption].map(({ icon, text, provider }) => (
               <button
                 key={provider}
                 className="w-full md:w-3/4 flex items-center justify-center space-x-2 p-3 border border-strokeColor rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => handleSignIn(provider)}
               >
                 <span className="w-5 h-5 flex items-center justify-center">
-                  {typeof icon === 'string' ? icon : icon}
+                  {iconMap[icon]}
                 </span>
                 <span>{text}</span>
               </button>

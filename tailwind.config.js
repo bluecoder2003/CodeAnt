@@ -17,6 +17,7 @@ export default {
         textDarkGray: "hsl(var(--TextDarkGray))",
         purpleColor: "hsl(var(--PurpleColor))",
         blueLightColor: "hsl(var(--BlueLightColor))",
+        blueDarkColor: "hsl(var(--BlueDarkColor))",
       },
     },
   },

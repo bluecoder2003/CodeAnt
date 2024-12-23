@@ -1,8 +1,8 @@
 import React from 'react';
-import SigninForm from '../components/SignInForm';
+import SignInForm from '../components/SigninForm';
 
 const SigninPage = () => {
-  return <SigninForm/>;
+  return <SignInForm/>;
 };
 
 export default SigninPage;

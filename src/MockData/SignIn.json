@@ -1,0 +1,19 @@
+{
+  "authButtons": {
+    "SAAS": [
+      { "icon": "FaGithub", "text": "Sign in with Github", "provider": "github" },
+      { "icon": "FaBitbucket", "text": "Sign in with Bitbucket", "provider": "bitbucket" },
+      { "icon": "VscAzureDevops", "text": "Sign in with Azure Devops", "provider": "azure" },
+      { "icon": "FaGitlab", "text": "Sign in with GitLab", "provider": "gitlab" }
+    ],
+    "Self Hosted": [
+      { "icon": "FaGitlab", "text": "Self Hosted GitLab", "provider": "gitlab" },
+      { "icon": "IoKeyOutline", "text": "Sign in with SSO", "provider": "sso" }
+    ]
+  },
+  "stats": [
+    { "value": "30+", "label": "Language Support" },
+    { "value": "10K+", "label": "Developers" },
+    { "value": "100K+", "label": "Hours Saved" }
+  ]
+}
