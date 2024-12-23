@@ -3,7 +3,8 @@ import { BiHome } from "react-icons/bi";
 import { LuCodeXml, LuBookText, LuLogOut } from "react-icons/lu";
 import { HiOutlineCloud } from "react-icons/hi2";
 import { IoSettingsOutline, IoCallOutline } from "react-icons/io5";
-import { Menu, X } from 'lucide-react';
+import { MdOutlineMenu } from "react-icons/md";
+import { RxCross2 } from "react-icons/rx";
 
 const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
   const [isOpen, setIsOpen] = useState(false);
@@ -24,7 +25,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
         <div className="p-4 border-b border-strokeColor flex justify-between items-center">
           <img src="/assets/logo.png" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(false)}>
-            <X className="w-6 h-6" />
+            <RxCross2 className="w-6 h-6" />
           </button>
         </div>
         
@@ -57,7 +58,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
         <div className="flex justify-between items-center p-4">
           <img src="/assets/logo.png" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(true)}>
-            <Menu className="w-6 h-6" />
+            <MdOutlineMenu className="w-6 h-6" />
           </button>
         </div>
       </div>
