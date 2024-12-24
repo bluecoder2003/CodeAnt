@@ -23,7 +23,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
       <div className="absolute inset-0 bg-gray-800 opacity-50" onClick={() => setIsOpen(false)}></div>
       <div className="relative bg-primaryWhite border-r border-strokeColor h-auto w-full">
         <div className="p-4 border-b border-strokeColor flex justify-between items-center">
-          <img src="/assets/logo.png" alt="CodeAnt AI" className="h-8" />
+          <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(false)}>
             <RxCross2 className="w-6 h-6" />
           </button>
@@ -56,7 +56,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
     <>
       <div className="md:hidden fixed top-0 left-0 right-0 bg-primaryWhite z-40 border-b border-strokeColor">
         <div className="flex justify-between items-center p-4">
-          <img src="/assets/logo.png" alt="CodeAnt AI" className="h-8" />
+          <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(true)}>
             <MdOutlineMenu className="w-6 h-6" />
           </button>
@@ -68,7 +68,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
       <div className="hidden md:flex flex-col justify-between w-1/6 bg-primaryWhite border-r border-strokeColor">
         <div className="p-4">
           <div className="flex items-center mb-6">
-            <img src="/assets/logo.png" alt="CodeAnt AI" className="w-3/4 h-3/4" />
+            <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
           </div>
           
           <select

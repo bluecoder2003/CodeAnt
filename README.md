@@ -1,8 +1,69 @@
-# React + Vite
+# Frontend Implementation Project
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern React implementation of the provided Figma design, built with best practices and maintainable architecture.
 
-Currently, two official plugins are available:
+## Tech Stack
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- React 18
+- Tailwind CSS
+- React Icons
+- Vite
+
+## Prerequisites
+
+- npm or yarn
+- Git
+
+## Getting Started
+
+1. Clone the repository:
+```bash
+git clone https://github.com/bluecoder2003/CodeAnt.git
+cd codeant
+```
+
+2. Install dependencies:
+```bash
+npm install
+```
+
+3. Start development server:
+```bash
+npm run dev
+```
+
+Visit `http://localhost:5173` to view the app.
+
+## Project Structure
+
+```
+src/
+├── components/
+├── MockData/       # JSON to store Dashboard and SignIn json
+├── pages/          # pages to call dashboard and signin
+├── styles/         # Global styles
+├── main.jsx        # Root
+└── App.jsx         # Root component
+```
+
+## Available Scripts
+
+- `npm run dev` - Start development server
+- `npm run build` - Build for production
+
+## Design Implementation
+
+The implementation follows the Figma design with:
+- Responsive layouts
+- Consistent spacing
+- Matching typography
+- Color system
+- Component reusability
+
+## Best Practices
+
+- Component composition
+- Consistent naming conventions
+- Performance optimizations
+- Accessibility standards
+

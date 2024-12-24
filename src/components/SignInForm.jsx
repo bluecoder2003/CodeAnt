@@ -71,7 +71,7 @@ const SignInPage = () => {
         <div className="w-full max-w-2xl bg-primaryWhite rounded-2xl border border-strokeColor">
           <div className="text-center border-b border-strokeColor p-8">
             <div className='flex items-center justify-center mb-4'>
-              <img src="/assets/logo.png" alt="CodeAnt AI" className="w-1/3 h-1/3" />
+              <img src="/assets/Logo.webp" alt="CodeAnt AI" className="w-1/3 h-1/3" />
             </div>
             <h1 className="text-2xl font-semibold mb-6">Welcome to CodeAnt AI</h1>
             
