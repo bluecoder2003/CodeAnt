@@ -1,4 +1,4 @@
-# Frontend Implementation Project
+# Frontend Implementation 
 
 A modern React implementation of the provided Figma design, built with best practices and maintainable architecture.
 
