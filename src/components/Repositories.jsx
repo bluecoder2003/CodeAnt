@@ -8,8 +8,12 @@ import data from '../MockData/Dashboard.json';
 
 const Repositories = () => {
   const [selectedRepo, setSelectedRepo] = useState('UtkarshDhairyaPatel');
+  const [searchTerm, setSearchTerm] = useState('');
   
   const repositories = data.repositories;
+  const filteredRepositories = repositories.filter((repo) =>
+    repo.name.toLowerCase().includes(searchTerm.toLowerCase())
+  );
 
   return (
     <div className="flex h-screen bg-bgWhiteVariant">
@@ -43,12 +47,14 @@ const Repositories = () => {
                 type="text"
                 placeholder="Search Repositories"
                 className="w-full md:w-1/3 pl-10 pr-4 py-2 border border-strokeColor rounded-md"
+                value={searchTerm}
+                onChange={(e) => setSearchTerm(e.target.value)}
               />
             </div>
           </div>
 
           <div>
-            {repositories.map((repo) => (
+          {filteredRepositories.map((repo) => (
               <RepositoryCard key={repo.name} {...repo} />
             ))}
           </div>
