@@ -33,7 +33,7 @@ const SignInPage = () => {
         </div>
         
         <div className="bg-primaryWhite rounded-3xl shadow-2xl mb-4 relative max-w-md">
-          <div className="flex items-center space-x-2 p-4 border-b border-b-strokeColor ">
+          <div className="flex items-center gap-2 p-4 border-b border-b-strokeColor ">
             <img src="/assets/CodeAntLogo.webp" alt="CodeAnt AI" className="w-8 h-8" />
             <span className="font-bold text-lg">AI to Detect & Autofix Bad Code</span>
           </div>
@@ -92,11 +92,11 @@ const SignInPage = () => {
             </div>
           </div>
           <div className="text-center text-sm text-textLightGrey px-4 md:px-8 py-4 md:min-h-[250px]">
-          <div className="space-y-3 justify-center items-center flex flex-col">
+          <div className="gap-3 justify-center items-center flex flex-col">
             {authButtonsData[selectedOption].map(({ icon, text, provider }) => (
               <button
                 key={provider}
-                className="w-full md:w-3/4 flex items-center justify-center space-x-2 p-3 border border-strokeColor rounded-lg hover:bg-gray-50 transition-colors"
+                className="w-full md:w-3/4 flex items-center justify-center gap-2 p-3 border border-strokeColor rounded-lg hover:bg-gray-50 transition-colors"
                 onClick={() => handleSignIn(provider)}
               >
                 <span className="w-5 h-5 flex items-center justify-center">

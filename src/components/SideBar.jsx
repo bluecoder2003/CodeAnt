@@ -10,7 +10,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const NavItem = ({ icon, text, active }) => (
-    <div className={`flex items-center space-x-3 px-3 py-2 rounded-md cursor-pointer ${
+    <div className={`flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ${
       active ? 'bg-blueDarkColor hover:bg-blueDarkColor/90 text-primaryWhite' : 'hover:bg-gray-100'
     }`}>
       {icon}
@@ -38,7 +38,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
             <option>UtkarshDhairyaPanwar</option>
           </select>
 
-          <nav className="space-y-1">
+          <nav className="gap-1">
             <NavItem icon={<BiHome size={20} />} text="Repositories" active={false} />
             <NavItem icon={<LuCodeXml size={20} />} text="AI Code Review" active={false}/>
             <NavItem icon={<HiOutlineCloud size={20} />} text="Cloud Security" active={false}/>
@@ -79,14 +79,12 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
             <option>UtkarshDhairyaPanwar</option>
           </select>
 
-          <nav className="space-y-1">
+          <nav className="gap-1">
             <NavItem icon={<BiHome size={20} />} text="Repositories" active />
             <NavItem icon={<LuCodeXml size={20} />} text="AI Code Review" active={false}/>
             <NavItem icon={<HiOutlineCloud size={20} />} text="Cloud Security" active={false}/>
             <NavItem icon={<LuBookText size={20} />} text="How to Use" active={false}/>
             <NavItem icon={<IoSettingsOutline size={20} />} text="Settings" active={false}/>
-            <NavItem icon={<IoCallOutline size={20} />} text="Support" active={false}/>
-            <NavItem icon={<LuLogOut size={20} />} text="Logout" active={false}/>
           </nav>
         </div>
 

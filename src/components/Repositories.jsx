@@ -24,12 +24,12 @@ const Repositories = () => {
               <h1 className="text-2xl text-TextBlack font-semibold">Repositories</h1>
               <p className="text-sm font-light text-TextDarkGray">33 total repositories</p>
             </div>
-            <div className="flex space-x-3">
-              <button className="flex items-center space-x-2 px-3 py-2 rounded-md bg-bgWhiteVariant border border-strokeColor hover:bg-gray-100">
+            <div className="flex gap-3">
+              <button className="flex items-center gap-2 px-3 py-2 rounded-md bg-bgWhiteVariant border border-strokeColor hover:bg-gray-100">
                 <FiRefreshCw size={20} />
                 <span>Refresh All</span>
               </button>
-              <button className="flex items-center space-x-2 px-3 py-2 bg-blueDarkColor text-primaryWhite rounded-md hover:bg-blueDarkColor/90">
+              <button className="flex items-center gap-2 px-3 py-2 bg-blueDarkColor text-primaryWhite rounded-md hover:bg-blueDarkColor/90">
                 <IoAddOutline size={20} />
                 <span>Add Repository</span>
               </button>
