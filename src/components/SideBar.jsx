@@ -5,22 +5,27 @@ import { HiOutlineCloud } from "react-icons/hi2";
 import { IoSettingsOutline, IoCallOutline } from "react-icons/io5";
 import { MdOutlineMenu } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
+import { cn } from "../utils/cn";
 
 const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
   const [isOpen, setIsOpen] = useState(false);
 
   const NavItem = ({ icon, text, active }) => (
-    <div className={`flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer ${
-      active ? 'bg-blueDarkColor hover:bg-blueDarkColor/90 text-primaryWhite' : 'hover:bg-gray-100'
-    }`}>
+    <div className={cn(
+      "flex items-center gap-3 px-3 py-2 rounded-md cursor-pointer",
+      active ? "bg-blueDarkColor hover:bg-blueDarkColor/90 text-primaryWhite" : "hover:bg-gray-100"
+    )}>
       {icon}
       <span>{text}</span>
     </div>
   );
 
   const MobileMenu = () => (
-    <div className={`fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out ${isOpen ? 'translate-x-0' : '-translate-x-full'}`}>
-      <div className="absolute inset-0 bg-gray-800 opacity-50" onClick={() => setIsOpen(false)}></div>
+    <div className={cn(
+      "fixed inset-0 z-50 transform transition-transform duration-300 ease-in-out",
+      isOpen ? "translate-x-0" : "-translate-x-full"
+    )}>
+      <div className="absolute inset-0 bg-gray-800 opacity-50 h-full" onClick={() => setIsOpen(false)} />
       <div className="relative bg-primaryWhite border-r border-strokeColor h-auto w-full">
         <div className="p-4 border-b border-strokeColor flex justify-between items-center">
           <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
@@ -45,7 +50,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
             <NavItem icon={<LuBookText size={20} />} text="How to Use" active={false}/>
             <NavItem icon={<IoSettingsOutline size={20} />} text="Settings" active={false}/>
             <NavItem icon={<IoCallOutline size={20} />} text="Support" active={false}/>
-            <NavItem icon={<LuLogOut size={20} />} text="Logout"active={false}/>
+            <NavItem icon={<LuLogOut size={20} />} text="Logout" active={false}/>
           </nav>
         </div>
       </div>
