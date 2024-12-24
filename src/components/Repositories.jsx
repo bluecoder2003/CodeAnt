@@ -18,7 +18,7 @@ const Repositories = () => {
 
       
       <div className="flex-1 overflow-auto ">
-        <div className="m-auto md:m-4 border border-strokeColor rounded-2xl bg-primaryWhite h-full md:h-auto">
+        <div className="m-auto md:m-4 md:border md:border-strokeColor rounded-2xl bg-bgWhiteVariant md:bg-primaryWhite h-full md:h-auto">
           <div className="flex flex-col mt-16 md:mt-0 justify-between items-start md:items-center mb-2 p-4 md:flex-row">
             <div className='mb-4 md:mb-0'>
               <h1 className="text-2xl text-TextBlack font-semibold">Repositories</h1>

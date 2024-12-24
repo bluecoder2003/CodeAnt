@@ -7,11 +7,11 @@ import { IoKeyOutline } from "react-icons/io5";
 import data from '../MockData/SignIn.json';
 
 const iconMap = {
-  FaGithub: <FaGithub className='w-8 h-8' />,
-  FaBitbucket: <FaBitbucket className='w-8 h-8 text-secondaryColor' />,
-  VscAzureDevops: <VscAzureDevops className='w-8 h-8 text-secondaryColor' />,
-  FaGitlab: <FaGitlab className='w-8 h-8 text-[#E24329]' />,
-  IoKeyOutline: <IoKeyOutline className='w-8 h-8' />
+  FaGithub: <FaGithub size={20} />,
+  FaBitbucket: <FaBitbucket size={20} className='text-secondaryColor' />,
+  VscAzureDevops: <VscAzureDevops size={20} className='text-secondaryColor' />,
+  FaGitlab: <FaGitlab size={20} className='text-[#E24329]' />,
+  IoKeyOutline: <IoKeyOutline size={20} />
 };
 
 const SignInPage = () => {
@@ -70,17 +70,17 @@ const SignInPage = () => {
       <div className="flex-1 flex flex-col items-center justify-center p-8 bg-bgWhiteVariant">
         <div className="w-full max-w-2xl bg-primaryWhite rounded-2xl border border-strokeColor">
           <div className="text-center border-b border-strokeColor p-8">
-            <div className='flex items-center justify-center mb-4'>
-              <img src="/assets/Logo.webp" alt="CodeAnt AI" className="w-1/3 h-1/3" />
+            <div className='flex items-center justify-center mb-8'>
+              <img src="/assets/Logo.webp" alt="CodeAnt AI" className="w-2/3 h-2/3 md:w-1/3 md:h-1/3" />
             </div>
-            <h1 className="text-2xl font-semibold mb-6">Welcome to CodeAnt AI</h1>
+            <h1 className="text-2xl md:text-3xl font-semibold mb-6">Welcome to CodeAnt AI</h1>
             
             <div className="w-full flex flex-row">
               {['SAAS', 'Self Hosted'].map((option) => (
                 <button
                   key={option}
                   onClick={() => setSelectedOption(option)}
-                  className={`px-4 py-3 w-full transition-colors rounded-lg ${
+                  className={`p-2 md:px-4 md:py-3 w-full transition-colors rounded-lg ${
                     selectedOption === option
                       ? 'bg-blue-600 text-white'
                       : 'text-TextLightGrey hover:bg-gray-100 border border-strokeColor'

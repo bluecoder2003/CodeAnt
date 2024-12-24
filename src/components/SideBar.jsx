@@ -25,7 +25,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
         <div className="p-4 border-b border-strokeColor flex justify-between items-center">
           <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(false)}>
-            <RxCross2 className="w-6 h-6" />
+            <RxCross2 size={24} />
           </button>
         </div>
         
@@ -58,7 +58,7 @@ const Sidebar = ({ selectedRepo, setSelectedRepo }) => {
         <div className="flex justify-between items-center p-4">
           <img src="/assets/Logo.webp" alt="CodeAnt AI" className="h-8" />
           <button onClick={() => setIsOpen(true)}>
-            <MdOutlineMenu className="w-6 h-6" />
+            <MdOutlineMenu size={24} />
           </button>
         </div>
       </div>

@@ -12,7 +12,7 @@ export const RepositoryCard = ({ name, language, size, visibility, updated }) =>
           {visibility}
         </span>
         </div>
-          <div className="flex items-center gap-8 mt-2 text-sm text-textDarkGray">
+          <div className="flex items-center gap-6 md:gap-8 mt-2 text-sm text-textDarkGray whitespace-nowrap overflow-hidden">
             <div className='flex items-center gap-1'>
               <span>{language}</span>
               <MdCircle size={10} className='text-blueDarkColor'/>
