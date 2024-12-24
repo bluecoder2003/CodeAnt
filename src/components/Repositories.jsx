@@ -2,8 +2,8 @@ import React, { useState } from 'react';
 import { FiRefreshCw } from "react-icons/fi";
 import { IoAddOutline } from "react-icons/io5";
 import { IoIosSearch } from "react-icons/io";
-import { RepositoryCard } from '../components/RepositoryCard';
-import Sidebar from '../components/SideBar';
+import { RepositoryCard } from './RepositoryCard';
+import Sidebar from './SideBar';
 import data from '../MockData/Dashboard.json';
 
 const Repositories = () => {
